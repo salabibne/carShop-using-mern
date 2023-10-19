@@ -10,6 +10,7 @@ import Error from "./Componnets/Error/Error";
 import Home from "./Componnets/Home/Home";
 import AddProducts from "./Componnets/Home/AddProducts";
 import Mycart from "./Componnets/Home/Mycart";
+import SpecificBrands from "./Brands/SpecificBrands";
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
       {
         path:"/mycarts",
         element:<Mycart></Mycart>
+      },
+      {
+        path:"/brands/:brand_name",
+        element:<SpecificBrands></SpecificBrands>,
+        loader:({params}) => fetch(`http://localhost:5000/brands/${params.brand_name}`)
       }
     ]
   },

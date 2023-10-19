@@ -1,0 +1,26 @@
+[
+    {
+      "brand_name": "Toyota",
+      "brand_image": "/toyota.png"
+    },
+    {
+      "brand_name": "Range Rover",
+      "brand_image": "/rangeroverr.png"
+    },
+    {
+      "brand_name": "BMW",
+      "brand_image": "/BMW.png"
+    },
+    {
+      "brand_name": "Mercedes-Benz",
+      "brand_image": "/merbeng.png"
+    },
+    {
+      "brand_name": "Tesla",
+      "brand_image": "/tesla.jpg"
+    },
+    {
+      "brand_name": "Honda",
+      "brand_image": "/honda.jpg"
+    }
+  ]

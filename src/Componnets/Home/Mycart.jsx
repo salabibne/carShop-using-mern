@@ -20,7 +20,7 @@ const Mycart = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/brands/carts/delete/${_id}`, {
+                fetch(`https://siatos-serverside-g4ts96eur-salab-ibnes-projects.vercel.app/brands/carts/delete/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

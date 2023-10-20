@@ -17,7 +17,7 @@ const Update = () => {
         const addproducts = { img, name, brandname, type, price, description, rating }
         console.log(addproducts);
 
-        fetch(`http://localhost:5000/brands/updates/${loadedproduct._id}`, {
+        fetch(`https://siatos-serverside-g4ts96eur-salab-ibnes-projects.vercel.app/brands/updates/${loadedproduct._id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

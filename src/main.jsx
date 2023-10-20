@@ -37,22 +37,22 @@ const router = createBrowserRouter([
       {
         path:"/mycarts",
         element:<PrivateRoutes><Mycart></Mycart></PrivateRoutes>,
-        loader : ()=>fetch('http://localhost:5000/brands/carts/showcart')
+        loader : ()=>fetch('https://siatos-serverside-g4ts96eur-salab-ibnes-projects.vercel.app/brands/carts/showcart')
       },
       {
         path:"/brands/:brand_name",
         element:<SpecificBrands></SpecificBrands>,
-        loader:({params}) => fetch(`http://localhost:5000/brands/${params.brand_name}`)
+        loader:({params}) => fetch(`https://siatos-serverside-g4ts96eur-salab-ibnes-projects.vercel.app/brands/${params.brand_name}`)
       },
       {
         path:"/brands/details/:id",
         element:<PrivateRoutes><Details></Details></PrivateRoutes>,
-        loader :({params}) => fetch(`http://localhost:5000/brands/details/${params.id}`)
+        loader :({params}) => fetch(`https://siatos-serverside-g4ts96eur-salab-ibnes-projects.vercel.app/brands/details/${params.id}`)
       },
       {
         path: "/brands/updates/:id",
         element: <PrivateRoutes><Update></Update></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/brands/details/${params.id}`)
+        loader: ({params}) => fetch(`https://siatos-serverside-g4ts96eur-salab-ibnes-projects.vercel.app/brands/details/${params.id}`)
       },
       {
         path:"/login",

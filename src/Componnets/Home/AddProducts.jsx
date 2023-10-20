@@ -17,7 +17,7 @@ const AddProducts = () => {
         const addproducts ={img,name,brandname,type,price,description,rating}
         console.log(addproducts);
 
-        fetch('http://localhost:5000/brands',{
+        fetch('https://siatos-serverside-g4ts96eur-salab-ibnes-projects.vercel.app/brands',{
             method:"POST",
             headers: {
                 'content-type': 'application/json'

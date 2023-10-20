@@ -11,7 +11,7 @@ const Details = () => {
         const price = productDetails.price
         const carts = {img,name,brandname,price}
 
-        fetch('http://localhost:5000/brands/carts',{
+        fetch('https://siatos-serverside-g4ts96eur-salab-ibnes-projects.vercel.app/brands/carts',{
             method:"POST",
             headers: {
                 'content-type' : 'application/json' 

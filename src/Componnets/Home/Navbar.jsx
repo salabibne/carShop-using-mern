@@ -1,12 +1,24 @@
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { context_siatos } from "../Providers/Context";
 import { AiOutlineUser } from "react-icons/ai";
+import {  } from "react-icons/ai";
+
+
+
+
 
 
 const Navbar = () => {
     const { user, Logout } = useContext(context_siatos)
+    const [theme, setTheme] = useState(false)
+ 
+
+    const handleThemes = () => {
+        setTheme(!theme)
+
+    }
     const LoggingOut = () => {
         return Logout()
 
@@ -38,6 +50,16 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">
                     {navLinks}
                 </ul>
+            </div>
+            <div className="navbar-end">
+                <button onClick={handleThemes} className="p-2 bg-black text-white font-bold rounded-full">Darkmode
+                    {
+                        theme ? <p>normal</p> && document.querySelector("body").classList.add("dark")
+                          
+                         : <p>darkmode</p> && document.querySelector("body").classList.remove("dark")
+                    }
+                </button>
+               
             </div>
             <div className="navbar-end">
                 {

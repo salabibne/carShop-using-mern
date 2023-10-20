@@ -1,3 +1,26 @@
+/* index.css or App.css */
+
+/* Dark Mode */
+.dark {
+    background-color: #333; /* Background color for dark mode */
+    color: #fff; /* Text color for dark mode */
+}
+
+.dark a {
+    color: #6ab2e6; /* Link color for dark mode */
+}
+
+/* Light Mode */
+.light {
+    background-color: #fff; /* Background color for light mode */
+    color: #333; /* Text color for light mode */
+}
+
+.light a {
+    color: #007bff; /* Link color for light mode */
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

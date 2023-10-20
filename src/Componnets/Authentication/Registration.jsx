@@ -105,7 +105,7 @@ const Registration = () => {
                             {
                                 error && <p className="text-red-600 font-bold m-2">{error}</p>
                             }
-                            <p className="text-green-600 mt-2 text-lg">Already Register ? <Link className="btn" to="/login">Login</Link></p>
+                            <p className="text-green-600 mt-2 text-lg">Already Register? <Link className="btn" to="/login">Login</Link></p>
                         </div>
                        
                     </form>

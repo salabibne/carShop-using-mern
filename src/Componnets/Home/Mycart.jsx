@@ -70,7 +70,7 @@ const Mycart = () => {
                                     <td>{cart.name}</td>
                                     <td>{cart.brandname}</td>
                                     <td>{cart.price} Lakhs</td>
-                                    <td><button  onClick={()=> handleDelete(cart._id)} className="btn">Delete</button></td>
+                                    <td><button  onClick={()=> handleDelete(cart._id)} className="btn btn-error">Delete</button></td>
 
                                 </tr>)
                             }

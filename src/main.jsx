@@ -12,6 +12,7 @@ import AddProducts from "./Componnets/Home/AddProducts";
 import Mycart from "./Componnets/Home/Mycart";
 import SpecificBrands from "./Brands/SpecificBrands";
 import Details from "./Brands/Details";
+import Update from "./Brands/Update";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
         path:"/brands/details/:id",
         element:<Details></Details>,
         loader :({params}) => fetch(`http://localhost:5000/brands/details/${params.id}`)
+      },
+      {
+        path: "/brands/updates/:id",
+        element: <Update></Update>,
+        loader: ({params}) => fetch(`http://localhost:5000/brands/details/${params.id}`)
       }
     ]
   },

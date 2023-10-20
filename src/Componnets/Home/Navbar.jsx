@@ -1,11 +1,21 @@
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { context_siatos } from "../Providers/Context";
+import { AiOutlineUser } from "react-icons/ai";
 
 
 const Navbar = () => {
+    const { user, Logout } = useContext(context_siatos)
+    const LoggingOut = () => {
+        return Logout()
+
+    }
+
     const navLinks = <>
-    <li><NavLink to ="/">Home</NavLink></li>
-    <li><NavLink to ="/addproducts">AddProduct</NavLink></li>
-    <li><NavLink to ="/mycarts">MyCart</NavLink></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/addproducts">AddProduct</NavLink></li>
+        <li><NavLink to="/mycarts">MyCart</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -19,18 +29,26 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center">
-                
-               <img className="rounded-full"  width={50}  src ="/SiaTos.jpg"></img>
-               <p className="btn btn-ghost normal-case text-yellow-900 font-mono font-extrabold text-xl">SIATOS</p>
+
+                    <img className="rounded-full" width={50} src="/SiaTos.jpg"></img>
+                    <p className="btn btn-ghost normal-case text-yellow-900 font-mono font-extrabold text-xl">SIATOS</p>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                   {navLinks}
+                    {navLinks}
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Login</a>
+                {
+                    user ? <p className="font-bold text-xl">{user.email.split('@')[0]}<span>{user.photoURL ? <img width={50} className="rounded-full" src={user.photoURL}></img> : <AiOutlineUser></AiOutlineUser>}</span></p> : ""
+                }
+            </div>
+            <div className="navbar-end">
+                {
+                    user ? <button onClick={LoggingOut} className="p-4 bg-yellow-950 text-white  font-bold rounded-lg">Logout</button> : <Link to="/login"><button className="p-4 bg-yellow-950 text-white  font-bold rounded-lg">Login</button></Link>
+                }
+
             </div>
         </div>
     );
